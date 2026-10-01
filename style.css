@@ -1,0 +1,66 @@
+:root{--vert:#0A4D32;--vert2:#06311F;--jaune:#FFC72C;--rouge:#D7263D;--creme:#FFF8E7;--texte:#17241D}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Trebuchet MS","Segoe UI",sans-serif;background:var(--creme);color:var(--texte);line-height:1.6}
+/* En-tête : motif inspiré des pagnes */
+.hero{background:
+  repeating-linear-gradient(135deg,transparent 0 22px,rgba(255,199,44,.09) 22px 44px),var(--vert2);
+  color:#fff;padding:2rem max(1.25rem,calc((100% - 1000px)/2)) 2.5rem;border-bottom:10px solid var(--jaune)}
+.marque{margin:0 0 2.5rem;font-size:1.5rem;font-weight:800;letter-spacing:.02em}
+.marque span{color:#fff}
+.marque b{color:var(--jaune);background:var(--rouge);padding:.1rem .6rem;border-radius:6px;margin-left:.25rem}
+.hero h1{font-family:Georgia,serif;font-size:clamp(2.2rem,6.5vw,4.3rem);line-height:1.05;max-width:16ch;margin:0 0 1rem}
+.hero p{max-width:48ch;font-size:1.15rem;margin:0 0 1.75rem}
+.hero .marque{max-width:none;font-size:1.5rem;margin:0 0 2.5rem}
+nav{display:flex;gap:.75rem;flex-wrap:wrap}
+nav a{color:var(--vert2);background:var(--jaune);padding:.55rem 1.1rem;border-radius:99px;text-decoration:none;font-weight:700}
+nav a:hover{background:#fff}
+main{max-width:1000px;margin:auto;padding:0 1.25rem}
+section{padding:3rem 0}
+h2{font-family:Georgia,serif;font-size:2rem;margin:0 0 1.25rem;color:var(--vert);border-bottom:4px solid var(--jaune);display:inline-block;padding-bottom:.2rem}
+.intro{margin-top:0}
+.grille{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:1.5rem}
+.plat{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 6px 18px rgba(6,49,31,.13)}
+.plat img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.plat div{padding:1.1rem}
+.plat h3{margin:0 0 .35rem;font-size:1.2rem;color:var(--vert2)}
+.plat p{margin:0 0 .8rem;font-size:.98rem}
+.badge{display:inline-block;font-size:.85rem;font-weight:700;padding:.25rem .75rem;border-radius:99px;background:#ece7d4}
+.badge.oui{background:var(--vert);color:#fff}.badge.non{background:var(--rouge);color:#fff}
+.annonces{list-style:none;padding:0;margin:0}
+.annonces li{display:flex;flex-wrap:wrap;gap:.25rem 1rem;padding:1rem 1.1rem;border-left:8px solid #c9c4b0;background:#fff;margin-bottom:.6rem;border-radius:0 10px 10px 0}
+.annonces li.oui{border-color:var(--vert)}.annonces li.non{border-color:var(--rouge)}
+.annonces strong{min-width:16rem}.annonces small{margin-left:auto;color:#667}
+form{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;align-items:end}
+#reservation form{background:#fff;padding:1.5rem;border-radius:14px;border-top:8px solid var(--jaune)}
+label{display:flex;flex-direction:column;gap:.3rem;font-weight:700;font-size:.95rem;color:var(--vert2)}
+input,select{padding:.7rem;border:2px solid #cfcab5;border-radius:8px;font:inherit;background:#fff}
+button{padding:.8rem 1.4rem;background:var(--rouge);color:#fff;border:0;border-radius:8px;font-size:1rem;font-weight:700;cursor:pointer}
+button:hover{background:var(--vert)}
+:focus-visible{outline:3px solid var(--jaune);outline-offset:2px}
+.msg{padding:.8rem 1rem;border-radius:8px}.msg.ok{background:#d9f0e3}.msg.err{background:#f8d7d5}
+form.ligne{grid-template-columns:2fr 1.2fr 2fr auto;margin-bottom:.75rem;align-items:center}
+.tableau{overflow-x:auto}table{border-collapse:collapse;width:100%;background:#fff}
+th,td{padding:.55rem .75rem;border-bottom:1px solid #e4dfd0;text-align:left}
+footer{padding:2rem 1.25rem;text-align:center;background:var(--vert2);display:flex;gap:1.5rem;justify-content:center}
+footer a{color:var(--jaune)}
+@media(max-width:700px){form.ligne{grid-template-columns:1fr}}
+
+.plat .lieu{margin:.75rem 0 0;padding:.5rem .75rem;background:#fff3c4;border-left:5px solid var(--jaune);font-weight:700;color:var(--vert2)}
+
+form.sondage{display:block;background:#fff;padding:1.25rem;border-radius:14px;border-top:8px solid var(--jaune)}
+.choix{display:grid;grid-template-columns:auto minmax(150px,1.4fr) 2fr auto;gap:.75rem;align-items:center;padding:.6rem 0;border-bottom:1px solid #eee;flex-direction:row;font-weight:400}
+.choix .nom{font-weight:700}
+.barre{height:14px;background:#eee;border-radius:99px;overflow:hidden}
+.barre i{display:block;height:100%;background:var(--vert)}
+.nb{font-size:.9rem;min-width:5.5rem;text-align:right}
+form.sondage button{margin-top:1rem}
+@media(max-width:700px){.choix{grid-template-columns:auto 1fr auto}.barre{grid-column:2/4}}
+
+.lieu-box{background:#fff;border-left:10px solid var(--rouge);padding:1.25rem 1.5rem;border-radius:0 14px 14px 0;font-size:1.1rem}
+.lieu-box strong{font-size:1.3rem;color:var(--vert)}.lieu-box p{margin:.3rem 0}
+.lieu-box a{display:inline-block;margin-top:.5rem;background:var(--jaune);color:var(--vert2);font-weight:700;padding:.5rem 1rem;border-radius:99px;text-decoration:none}
+#cuisinier{display:none;background:#fff;border:3px solid var(--jaune);padding:1.25rem;margin:2rem 0;border-radius:14px}
+.ligne{display:grid;grid-template-columns:2fr 1.2fr 2fr auto;gap:.75rem;align-items:center;margin-bottom:.75rem}
+footer button{background:none;color:var(--jaune);text-decoration:underline;padding:0}
+#msgResa{margin-top:1rem}
+@media(max-width:700px){.ligne{grid-template-columns:1fr}}

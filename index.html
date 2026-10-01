@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Restaurant Congolais Alias Malewa</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero">
+  <p class="marque"><span>Restaurant</span> <b>Congolais</b></p>
+  <h1>Six plats du Congo, cuisinés comme à la maison.</h1>
+  <p>Découvrez la carte, voyez ce que le cuisinier prépare aujourd’hui et réservez votre table.</p>
+  <nav><a href="#plats">Les plats</a><a href="#annonces">Annonce du cuisinier</a><a href="#lieu">Vote des plats</a><a href="#reservation">Réserver</a></nav>
+</header>
+
+<main>
+  <div id="erreurGlobale" class="msg err" hidden></div>
+
+  <section id="cuisinier">
+    <h2>Espace cuisinier</h2>
+    <div id="formsAnnonce"></div>
+    <h3>Réservations reçues</h3>
+    <div class="tableau" id="listeResas"></div>
+  </section>
+
+  <section id="plats"><h2>Nos plats</h2><div class="grille" id="grille"></div></section>
+
+  <section id="annonces">
+    <h2>Annonce du cuisinier</h2>
+    <p class="intro">Le cuisinier indique ici s’il prépare chaque plat et où le trouver.</p>
+    <ul class="annonces" id="listeAnnonces"></ul>
+  </section>
+
+  <section id="lieu">
+    <h2>Lieu et vote des plats</h2>
+    <div class="lieu-box">
+      <strong>Où voter et trouver les plats</strong>
+      <p id="lieuAdresse"></p><p id="lieuHoraires"></p>
+      <a id="lieuCarte" href="#" target="_blank" rel="noopener">Voir sur la carte</a>
+    </div>
+    <div class="msg ok" id="msgVote" hidden></div>
+    <form class="sondage" id="formVote"><div id="choix"></div><button>Voter</button></form>
+  </section>
+
+  <section id="reservation">
+    <h2>Réserver une table</h2>
+    <form id="formResa">
+      <label>Nom<input name="nom" required maxlength="100"></label>
+      <label>Téléphone<input name="telephone" type="tel" required maxlength="30"></label>
+      <label>Date<input name="date" type="date" required></label>
+      <label>Heure<input name="heure" type="time" required></label>
+      <label>Personnes<input name="personnes" type="number" min="1" max="20" value="2" required></label>
+      <label>Plat souhaité (facultatif)<select name="plat" id="selPlat"><option value="">Aucun choix</option></select></label>
+      <button>Envoyer la réservation</button>
+    </form>
+    <div class="msg ok" id="msgResa" hidden>Réservation enregistrée. Nous vous contacterons au numéro indiqué.</div>
+  </section>
+</main>
+<footer><button id="btnCuisinier">Espace cuisinier</button></footer>
+<script src="script.js"></script>
+</body>
+</html>
